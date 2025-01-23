@@ -28,18 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            titleLogin = new Label();
+            EmailLabel = new Label();
+            EmailTextBox = new TextBox();
+            PasswordLabel = new Label();
+            PasswordTextBox = new TextBox();
+            PasswordCheckBoxLogin = new CheckBox();
+            btnSubmitLogin = new Button();
             SuspendLayout();
+            // 
+            // titleLogin
+            // 
+            resources.ApplyResources(titleLogin, "titleLogin");
+            titleLogin.FlatStyle = FlatStyle.Popup;
+            titleLogin.Name = "titleLogin";
+            // 
+            // EmailLabel
+            // 
+            resources.ApplyResources(EmailLabel, "EmailLabel");
+            EmailLabel.Name = "EmailLabel";
+            // 
+            // EmailTextBox
+            // 
+            resources.ApplyResources(EmailTextBox, "EmailTextBox");
+            EmailTextBox.Name = "EmailTextBox";
+            // 
+            // PasswordLabel
+            // 
+            resources.ApplyResources(PasswordLabel, "PasswordLabel");
+            PasswordLabel.Name = "PasswordLabel";
+            // 
+            // PasswordTextBox
+            // 
+            resources.ApplyResources(PasswordTextBox, "PasswordTextBox");
+            PasswordTextBox.Name = "PasswordTextBox";
+            // 
+            // PasswordCheckBoxLogin
+            // 
+            resources.ApplyResources(PasswordCheckBoxLogin, "PasswordCheckBoxLogin");
+            PasswordCheckBoxLogin.Cursor = Cursors.Hand;
+            PasswordCheckBoxLogin.Name = "PasswordCheckBoxLogin";
+            PasswordCheckBoxLogin.UseVisualStyleBackColor = true;
+            // 
+            // btnSubmitLogin
+            // 
+            btnSubmitLogin.BackColor = SystemColors.AppWorkspace;
+            btnSubmitLogin.Cursor = Cursors.Hand;
+            resources.ApplyResources(btnSubmitLogin, "btnSubmitLogin");
+            btnSubmitLogin.Name = "btnSubmitLogin";
+            btnSubmitLogin.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            Controls.Add(btnSubmitLogin);
+            Controls.Add(PasswordCheckBoxLogin);
+            Controls.Add(PasswordTextBox);
+            Controls.Add(PasswordLabel);
+            Controls.Add(EmailTextBox);
+            Controls.Add(EmailLabel);
+            Controls.Add(titleLogin);
             Name = "Login";
-            Text = "Login";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label titleLogin;
+        private Label EmailLabel;
+        private TextBox EmailTextBox;
+        private Label PasswordLabel;
+        private TextBox PasswordTextBox;
+        private CheckBox PasswordCheckBoxLogin;
+        private Button btnSubmitLogin;
     }
 }
