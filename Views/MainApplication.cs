@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login_Cadastro_windows_forms.Views
 {
-    public partial class Application : Form
+    public partial class MainApplication : Form
     {
-        public Application()
+        public MainApplication()
         {
             InitializeComponent();
         }

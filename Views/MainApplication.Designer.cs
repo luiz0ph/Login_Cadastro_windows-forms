@@ -1,6 +1,6 @@
 ﻿namespace Login_Cadastro_windows_forms.Views
 {
-    partial class Application
+    partial class MainApplication
     {
         /// <summary>
         /// Required designer variable.

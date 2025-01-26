@@ -37,6 +37,7 @@
             PasswordTextBox = new TextBox();
             PasswordCheckBoxSingUp = new CheckBox();
             btnSubmitSingUp = new Button();
+            linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
             // TitleSingUp
@@ -107,29 +108,45 @@
             // PasswordCheckBoxSingUp
             // 
             PasswordCheckBoxSingUp.AutoSize = true;
+            PasswordCheckBoxSingUp.Cursor = Cursors.Hand;
             PasswordCheckBoxSingUp.Location = new Point(34, 246);
             PasswordCheckBoxSingUp.Name = "PasswordCheckBoxSingUp";
             PasswordCheckBoxSingUp.Size = new Size(108, 19);
             PasswordCheckBoxSingUp.TabIndex = 7;
             PasswordCheckBoxSingUp.Text = "Show Password";
             PasswordCheckBoxSingUp.UseVisualStyleBackColor = true;
+            PasswordCheckBoxSingUp.CheckedChanged += ChangeVisibility;
             // 
             // btnSubmitSingUp
             // 
             btnSubmitSingUp.BackColor = SystemColors.AppWorkspace;
+            btnSubmitSingUp.Cursor = Cursors.Hand;
             btnSubmitSingUp.Font = new Font("Verdana", 9F, FontStyle.Bold);
             btnSubmitSingUp.Location = new Point(49, 296);
             btnSubmitSingUp.Name = "btnSubmitSingUp";
             btnSubmitSingUp.Size = new Size(127, 26);
             btnSubmitSingUp.TabIndex = 8;
-            btnSubmitSingUp.Text = "button1";
+            btnSubmitSingUp.Text = "Submit";
             btnSubmitSingUp.UseVisualStyleBackColor = false;
+            btnSubmitSingUp.Click += SubmitSingUp;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(151, 247);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(37, 15);
+            linkLabel1.TabIndex = 9;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Login";
+            linkLabel1.LinkClicked += OpenLogin;
             // 
             // SingUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(235, 361);
+            Controls.Add(linkLabel1);
             Controls.Add(btnSubmitSingUp);
             Controls.Add(PasswordCheckBoxSingUp);
             Controls.Add(PasswordTextBox);
@@ -139,6 +156,7 @@
             Controls.Add(NameTextBox);
             Controls.Add(NameLabel);
             Controls.Add(TitleSingUp);
+            Cursor = Cursors.Hand;
             MaximumSize = new Size(251, 400);
             MinimumSize = new Size(251, 400);
             Name = "SingUp";
@@ -159,5 +177,6 @@
         private TextBox PasswordTextBox;
         private CheckBox PasswordCheckBoxSingUp;
         private Button btnSubmitSingUp;
+        private LinkLabel linkLabel1;
     }
 }

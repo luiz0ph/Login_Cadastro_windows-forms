@@ -33,9 +33,10 @@
             EmailLabel = new Label();
             EmailTextBox = new TextBox();
             PasswordLabel = new Label();
-            PasswordTextBox = new TextBox();
+            PasswordTextBoxLogin = new TextBox();
             PasswordCheckBoxLogin = new CheckBox();
             btnSubmitLogin = new Button();
+            linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
             // titleLogin
@@ -59,10 +60,10 @@
             resources.ApplyResources(PasswordLabel, "PasswordLabel");
             PasswordLabel.Name = "PasswordLabel";
             // 
-            // PasswordTextBox
+            // PasswordTextBoxLogin
             // 
-            resources.ApplyResources(PasswordTextBox, "PasswordTextBox");
-            PasswordTextBox.Name = "PasswordTextBox";
+            resources.ApplyResources(PasswordTextBoxLogin, "PasswordTextBoxLogin");
+            PasswordTextBoxLogin.Name = "PasswordTextBoxLogin";
             // 
             // PasswordCheckBoxLogin
             // 
@@ -70,6 +71,7 @@
             PasswordCheckBoxLogin.Cursor = Cursors.Hand;
             PasswordCheckBoxLogin.Name = "PasswordCheckBoxLogin";
             PasswordCheckBoxLogin.UseVisualStyleBackColor = true;
+            PasswordCheckBoxLogin.CheckedChanged += ChangeVisibility;
             // 
             // btnSubmitLogin
             // 
@@ -78,14 +80,24 @@
             resources.ApplyResources(btnSubmitLogin, "btnSubmitLogin");
             btnSubmitLogin.Name = "btnSubmitLogin";
             btnSubmitLogin.UseVisualStyleBackColor = false;
+            btnSubmitLogin.Click += SubmitLogin;
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(linkLabel1, "linkLabel1");
+            linkLabel1.Cursor = Cursors.Hand;
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.TabStop = true;
+            linkLabel1.LinkClicked += OpenSingUp;
             // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(linkLabel1);
             Controls.Add(btnSubmitLogin);
             Controls.Add(PasswordCheckBoxLogin);
-            Controls.Add(PasswordTextBox);
+            Controls.Add(PasswordTextBoxLogin);
             Controls.Add(PasswordLabel);
             Controls.Add(EmailTextBox);
             Controls.Add(EmailLabel);
@@ -101,8 +113,9 @@
         private Label EmailLabel;
         private TextBox EmailTextBox;
         private Label PasswordLabel;
-        private TextBox PasswordTextBox;
+        private TextBox PasswordTextBoxLogin;
         private CheckBox PasswordCheckBoxLogin;
         private Button btnSubmitLogin;
+        private LinkLabel linkLabel1;
     }
 }
